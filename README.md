@@ -59,10 +59,10 @@ and presented`），但这一阶段传入的 `exec` 对象本身还没被冻结�
 ## 安装
 
 ```bash
-# 从 GitHub 安装
+# 从 GitHub 安装（pnpm 的 git 宿主简写；本仓库的验证环境未实测成功，见下）
 dsh plugin --profile web add github:y916/dsh-drop-empty
 
-# 或从本地目录安装（开发时可这样，profile 里是指向该目录的链接）
+# 或从本地目录安装（已验证；开发时也可这样，profile 里是指向该目录的链接）
 dsh plugin --profile web add ~/path/to/dsh-drop-empty
 ```
 
