@@ -1,0 +1,14 @@
+# dsh-drop-empty bundle patch
+#
+# 用 `dsh plugin --profile <name> add <本目录或包名>` 安装后自动挂载。
+# 需要限制范围时，在自己的 profile cordis.patch.yml 里覆盖该行：
+#
+#   - id: drop-empty
+#     config:
+#       tools: [subagent, subagent_fork]   # 只处理派发类工具
+#       excludeTools: [write]
+#       keepKeys: [content]
+#       dropWhitespaceOnly: true
+- insert:
+    - id: drop-empty
+      name: dsh-drop-empty

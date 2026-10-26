@@ -1,0 +1,53 @@
+{
+  "name": "dsh-drop-empty",
+  "version": "0.1.0",
+  "description": "DeepSeek Harness plugin: drop blank-string arguments that a tool schema does not require, so models that fill optional fields with an empty placeholder no longer fail the call.",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/index.js",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test test/index.test.js",
+    "test:integration": "node test/integration.mjs"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "cordis",
+    "tool-call",
+    "arguments",
+    "empty-string",
+    "model-repair"
+  ],
+  "license": "MIT",
+  "author": "Lit1ang (https://github.com/y916)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/y916/dsh-drop-empty.git"
+  },
+  "homepage": "https://github.com/y916/dsh-drop-empty#readme",
+  "bugs": {
+    "url": "https://github.com/y916/dsh-drop-empty/issues"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.1"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "manifestVersion": 1
+  }
+}
